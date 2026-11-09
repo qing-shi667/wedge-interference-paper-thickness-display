@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="劈尖干涉测量擦镜纸厚度的实验原理与演示数据表。">
+  <meta name="description" content="劈尖干涉测量擦镜纸厚度的实验原理与实验数据表。">
   <title>用劈尖干涉测量擦镜纸厚度 | 数据展示</title>
   <style>
     :root { font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif; color: #1d292a; background: #fff; }
@@ -55,24 +55,24 @@
       <p>两块光学平板玻璃一端紧密贴合，形成棱边；另一端放入折成三折的一张擦镜纸，两块玻璃之间形成一层楔形空气薄膜。</p>
       <p>单色钠光垂直入射时，一部分光在空气薄膜的上表面（玻璃→空气界面）反射，另一部分光透射进入空气层后，在下表面（空气→玻璃界面）反射。两束反射光频率相同、振动方向一致，可以发生薄膜等厚干涉。下表面的反射产生半波损失，因此两束反射光的光程差为：</p>
       <p class="display-equation"><span class="equation">Δ = 2d + <span class="fraction"><span>λ</span><span>2</span></span></span></p>
-      <p>其中，d 是该处的空气膜厚度。暗纹满足 <span class="equation">2d = kλ</span>（k = 0, 1, 2, …）。相邻两条暗纹对应的空气膜厚度差为 <span class="equation">Δd = λ/2</span>。</p>
-      <p>设相邻暗纹间距为 b、劈尖角为 θ。由于 θ 很小，<span class="equation">tan θ ≈ θ = <span class="fraction"><span>Δd</span><span>b</span></span> = <span class="fraction"><span>λ</span><span>2b</span></span></span>。若棱边至擦镜纸一侧边缘的距离为 L、三折擦镜纸总厚度为 D<sub>总</sub>，则 <span class="equation">tan θ = D<sub>总</sub>/L</span>。</p>
-      <p>联立两式，得到 <span class="equation">D<sub>总</sub> = λL/(2b)</span>。纸折成三层，因此单张擦镜纸厚度为 <span class="equation">D<sub>测</sub> = D<sub>总</sub>/3 = λL/(6b)</span>。对多组 b、L 分别计算后取算术平均值。</p>
+      <p>其中，d 是该处的空气膜厚度。暗纹满足 <span class="equation">2d = kλ</span>（k = 0, 1, 2, …）。相邻两条暗纹对应的空气膜厚度差为 <span class="equation">Δd = <span class="fraction"><span>λ</span><span>2</span></span></span>。</p>
+      <p>设相邻暗纹间距为 b、劈尖角为 θ。由于 θ 很小，<span class="equation">tan θ ≈ θ = <span class="fraction"><span>Δd</span><span>b</span></span> = <span class="fraction"><span>λ</span><span>2b</span></span></span>。若棱边至擦镜纸一侧边缘的距离为 L、三折擦镜纸总厚度为 D<sub>总</sub>，则 <span class="equation">tan θ = <span class="fraction"><span>D<sub>总</sub></span><span>L</span></span></span>。</p>
+      <p>联立两式，得到 <span class="equation">D<sub>总</sub> = <span class="fraction"><span>λL</span><span>2b</span></span></span>。纸折成三层，因此单张擦镜纸厚度为 <span class="equation">D<sub>测</sub> = <span class="fraction"><span>D<sub>总</sub></span><span>3</span></span> = <span class="fraction"><span>λL</span><span>6b</span></span></span>。对多组 b、L 分别计算后取算术平均值。</p>
     </section>
 
     <section class="data" aria-labelledby="data-title">
-      <h2 id="data-title">演示数据</h2>
+      <h2 id="data-title">实验数据</h2>
       <div class="table-scroll">
-        <table aria-label="劈尖干涉测量擦镜纸厚度演示数据">
+        <table aria-label="劈尖干涉测量擦镜纸厚度实验数据">
           <colgroup><col class="label"><col span="10"></colgroup>
           <thead>
             <tr class="constants"><th colspan="11"><i>D</i><sub>理</sub> = 0.020 mm&nbsp;&nbsp;&nbsp;&nbsp; λ = 589.3 nm</th></tr>
             <tr class="number-row"><th scope="col">测量次数</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">6</th><th scope="col">7</th><th scope="col">8</th><th scope="col">9</th><th scope="col">10</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row">b / mm</th><td>0.1970</td><td>0.1957</td><td>0.2007</td><td>0.1961</td><td>0.2004</td><td>0.1956</td><td>0.2001</td><td>0.1965</td><td>0.2005</td><td>0.1970</td></tr>
-            <tr><th scope="row">L / mm</th><td>42.00</td><td>42.01</td><td>42.03</td><td>42.07</td><td>42.01</td><td>41.91</td><td>41.99</td><td>42.02</td><td>42.02</td><td>41.96</td></tr>
-            <tr><th scope="row">D<sub>测</sub> / mm</th><td>0.02094</td><td>0.02108</td><td>0.02057</td><td>0.02107</td><td>0.02059</td><td>0.02104</td><td>0.02061</td><td>0.02100</td><td>0.02058</td><td>0.02092</td></tr>
+            <tr><th scope="row">b（mm）</th><td>0.1970</td><td>0.1957</td><td>0.2007</td><td>0.1961</td><td>0.2004</td><td>0.1956</td><td>0.2001</td><td>0.1965</td><td>0.2005</td><td>0.1970</td></tr>
+            <tr><th scope="row">L（mm）</th><td>42.00</td><td>42.01</td><td>42.03</td><td>42.07</td><td>42.01</td><td>41.91</td><td>41.99</td><td>42.02</td><td>42.02</td><td>41.96</td></tr>
+            <tr><th scope="row">D<sub>测</sub>（mm）</th><td>0.02094</td><td>0.02108</td><td>0.02057</td><td>0.02107</td><td>0.02059</td><td>0.02104</td><td>0.02061</td><td>0.02100</td><td>0.02058</td><td>0.02092</td></tr>
           </tbody>
         </table>
       </div>
