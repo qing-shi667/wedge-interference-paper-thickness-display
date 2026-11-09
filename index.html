@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="劈尖干涉测量擦镜纸厚度的实验原理与演示数据表。">
+  <title>用劈尖干涉测量擦镜纸厚度 | 数据展示</title>
+  <style>
+    :root { font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif; color: #1d292a; background: #fff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .wrap { width: min(1180px, calc(100% - 36px)); margin-inline: auto; }
+    header { border-bottom: 1px solid #d9dfdc; }
+    header .wrap { padding: 23px 0; }
+    h1 { margin: 0; font-size: 25px; line-height: 1.45; }
+    main { padding: 30px 0 55px; }
+    h2 { margin: 0 0 16px; font-size: 19px; }
+    .principle { max-width: 950px; }
+    .principle p { margin: 0 0 12px; line-height: 1.9; text-indent: 2em; }
+    .principle .display-equation { margin: 6px 0 15px; text-align: center; text-indent: 0; }
+    .equation { display: inline-block; color: #163e3b; font-family: Cambria, "Times New Roman", serif; font-size: 19px; text-indent: 0; }
+    .fraction { display: inline-flex; width: max-content; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.1; text-indent: 0; white-space: nowrap; }
+    .fraction span:first-child { padding: 0 4px 2px; border-bottom: 1px solid currentColor; }
+    .fraction span:last-child { padding-top: 2px; }
+    .data { margin-top: 31px; padding-top: 25px; border-top: 1px solid #d9dfdc; }
+    .table-scroll { overflow-x: auto; border: 1px solid #222; }
+    table { width: 100%; min-width: 950px; border-collapse: collapse; table-layout: fixed; font-family: Cambria, "Times New Roman", serif; font-size: 17px; font-variant-numeric: tabular-nums; text-align: center; }
+    col.label { width: 145px; }
+    th, td { padding: 19px 5px; border-right: 1px solid #222; border-bottom: 1px solid #222; font-weight: 400; white-space: nowrap; }
+    th:last-child, td:last-child { border-right: 0; }
+    tr:last-child th, tr:last-child td { border-bottom: 0; }
+    .constants th { padding: 14px 8px; }
+    .number-row th { padding: 17px 5px; }
+    tbody th { font-style: italic; }
+    .data-note { margin: 11px 0 0; color: #65706c; font-size: 13px; }
+    .table-formula { margin: 20px 0 0; font-size: 16px; }
+    .table-formula .equation { font-size: 23px; }
+    .result { margin: 13px 0 0; line-height: 1.7; }
+    @media (max-width: 650px) {
+      .wrap { width: calc(100% - 28px); }
+      header .wrap { padding: 18px 0; }
+      h1 { font-size: 21px; }
+      main { padding-top: 22px; }
+      .principle p { line-height: 1.85; }
+      .equation { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><h1>用劈尖干涉测量擦镜纸厚度</h1></div></header>
+  <main class="wrap">
+    <section class="principle" aria-labelledby="principle-title">
+      <h2 id="principle-title">实验原理</h2>
+      <p>两块光学平板玻璃一端紧密贴合，形成棱边；另一端放入折成三折的一张擦镜纸，两块玻璃之间形成一层楔形空气薄膜。</p>
+      <p>单色钠光垂直入射时，一部分光在空气薄膜的上表面（玻璃→空气界面）反射，另一部分光透射进入空气层后，在下表面（空气→玻璃界面）反射。两束反射光频率相同、振动方向一致，可以发生薄膜等厚干涉。下表面的反射产生半波损失，因此两束反射光的光程差为：</p>
+      <p class="display-equation"><span class="equation">Δ = 2d + <span class="fraction"><span>λ</span><span>2</span></span></span></p>
+      <p>其中，d 是该处的空气膜厚度。暗纹满足 <span class="equation">2d = kλ</span>（k = 0, 1, 2, …）。相邻两条暗纹对应的空气膜厚度差为 <span class="equation">Δd = λ/2</span>。</p>
+      <p>设相邻暗纹间距为 b、劈尖角为 θ。由于 θ 很小，<span class="equation">tan θ ≈ θ = <span class="fraction"><span>Δd</span><span>b</span></span> = <span class="fraction"><span>λ</span><span>2b</span></span></span>。若棱边至擦镜纸一侧边缘的距离为 L、三折擦镜纸总厚度为 D<sub>总</sub>，则 <span class="equation">tan θ = D<sub>总</sub>/L</span>。</p>
+      <p>联立两式，得到 <span class="equation">D<sub>总</sub> = λL/(2b)</span>。纸折成三层，因此单张擦镜纸厚度为 <span class="equation">D<sub>测</sub> = D<sub>总</sub>/3 = λL/(6b)</span>。对多组 b、L 分别计算后取算术平均值。</p>
+    </section>
+
+    <section class="data" aria-labelledby="data-title">
+      <h2 id="data-title">演示数据</h2>
+      <div class="table-scroll">
+        <table aria-label="劈尖干涉测量擦镜纸厚度演示数据">
+          <colgroup><col class="label"><col span="10"></colgroup>
+          <thead>
+            <tr class="constants"><th colspan="11"><i>D</i><sub>理</sub> = 0.020 mm&nbsp;&nbsp;&nbsp;&nbsp; λ = 589.3 nm</th></tr>
+            <tr class="number-row"><th scope="col">测量次数</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">6</th><th scope="col">7</th><th scope="col">8</th><th scope="col">9</th><th scope="col">10</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">b / mm</th><td>0.1970</td><td>0.1957</td><td>0.2007</td><td>0.1961</td><td>0.2004</td><td>0.1956</td><td>0.2001</td><td>0.1965</td><td>0.2005</td><td>0.1970</td></tr>
+            <tr><th scope="row">L / mm</th><td>42.00</td><td>42.01</td><td>42.03</td><td>42.07</td><td>42.01</td><td>41.91</td><td>41.99</td><td>42.02</td><td>42.02</td><td>41.96</td></tr>
+            <tr><th scope="row">D<sub>测</sub> / mm</th><td>0.02094</td><td>0.02108</td><td>0.02057</td><td>0.02107</td><td>0.02059</td><td>0.02104</td><td>0.02061</td><td>0.02100</td><td>0.02058</td><td>0.02092</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="data-note">窄屏可左右滑动查看完整表格。</p>
+      <p class="table-formula"><span class="equation">D<sub>测</sub> = <span class="fraction"><span>λL</span><span>6b</span></span></span></p>
+      <p class="result">平均单张厚度：<strong>0.02084 mm</strong>；相对误差：<strong>4.21%</strong>。</p>
+    </section>
+  </main>
+</body>
+</html>
