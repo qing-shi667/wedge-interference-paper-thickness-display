@@ -23,6 +23,10 @@
     .fraction { display: inline-flex; width: max-content; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.1; text-indent: 0; white-space: nowrap; }
     .fraction span:first-child { padding: 0 4px 2px; border-bottom: 1px solid currentColor; }
     .fraction span:last-child { padding-top: 2px; }
+    .figures { margin-top: 28px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .figures figure { margin: 0; min-width: 0; }
+    .figures img { display: block; width: 100%; height: 340px; object-fit: contain; background: #f8faf9; }
+    .figures figcaption { margin-top: 9px; color: #52615d; font-size: 14px; line-height: 1.5; text-align: center; }
     .data { margin-top: 31px; padding-top: 25px; border-top: 1px solid #d9dfdc; }
     .table-scroll { overflow-x: auto; border: 1px solid #222; }
     table { width: 100%; min-width: 950px; border-collapse: collapse; table-layout: fixed; font-family: Cambria, "Times New Roman", serif; font-size: 17px; font-variant-numeric: tabular-nums; text-align: center; }
@@ -35,7 +39,7 @@
     tbody th { font-style: italic; }
     .data-note { margin: 11px 0 0; color: #65706c; font-size: 13px; }
     .table-formula { margin: 20px 0 0; font-size: 16px; }
-    .table-formula .equation { font-size: 23px; }
+    .table-formula .equation { display: block; margin-bottom: 7px; font-size: 23px; }
     .result { margin: 13px 0 0; line-height: 1.7; }
     @media (max-width: 650px) {
       .wrap { width: calc(100% - 28px); }
@@ -44,6 +48,8 @@
       main { padding-top: 22px; }
       .principle p { line-height: 1.85; }
       .equation { font-size: 18px; }
+      .figures { grid-template-columns: 1fr; gap: 23px; }
+      .figures img { height: auto; max-height: 360px; }
     }
   </style>
 </head>
@@ -57,7 +63,18 @@
       <p class="display-equation"><span class="equation">Δ = 2d + <span class="fraction"><span>λ</span><span>2</span></span></span></p>
       <p>其中，d 是该处的空气膜厚度。暗纹满足 <span class="equation">2d = kλ</span>（k = 0, 1, 2, …）。相邻两条暗纹对应的空气膜厚度差为 <span class="equation">Δd = <span class="fraction"><span>λ</span><span>2</span></span></span>。</p>
       <p>设相邻暗纹间距为 b、劈尖角为 θ。由于 θ 很小，<span class="equation">tan θ ≈ θ = <span class="fraction"><span>Δd</span><span>b</span></span> = <span class="fraction"><span>λ</span><span>2b</span></span></span>。若棱边至擦镜纸一侧边缘的距离为 L、三折擦镜纸总厚度为 D<sub>总</sub>，则 <span class="equation">tan θ = <span class="fraction"><span>D<sub>总</sub></span><span>L</span></span></span>。</p>
-      <p>联立两式，得到 <span class="equation">D<sub>总</sub> = <span class="fraction"><span>λL</span><span>2b</span></span></span>。纸折成三层，因此单张擦镜纸厚度为 <span class="equation">D<sub>测</sub> = <span class="fraction"><span>D<sub>总</sub></span><span>3</span></span> = <span class="fraction"><span>λL</span><span>6b</span></span></span>。对多组 b、L 分别计算后取算术平均值。</p>
+      <p>联立两式，得到 <span class="equation">D<sub>总</sub> = <span class="fraction"><span>Lλ</span><span>2b</span></span></span>。示意图中纸端标注的 D 表示此处的总厚度 D<sub>总</sub>。纸折成三层，因此单张擦镜纸厚度为 <span class="equation">D = <span class="fraction"><span>D<sub>总</sub></span><span>3</span></span> = <span class="fraction"><span>Lλ</span><span>6b</span></span></span>。对多组 b、L 分别计算后取算术平均值。</p>
+    </section>
+
+    <section class="figures" aria-label="实验图像">
+      <figure>
+        <img src="images/wedge-fringes.jpg" alt="显微镜下观察到的钠光劈尖干涉条纹" loading="lazy">
+        <figcaption>钠光劈尖干涉条纹</figcaption>
+      </figure>
+      <figure>
+        <img src="images/wedge-apparatus.png" alt="劈尖干涉光路及显微镜观测示意图，标出劈尖角、条纹间距和纸端厚度" loading="lazy">
+        <figcaption>实验装置与光路示意图</figcaption>
+      </figure>
     </section>
 
     <section class="data" aria-labelledby="data-title">
@@ -72,12 +89,15 @@
           <tbody>
             <tr><th scope="row">b（mm）</th><td>0.1970</td><td>0.1957</td><td>0.2007</td><td>0.1961</td><td>0.2004</td><td>0.1956</td><td>0.2001</td><td>0.1965</td><td>0.2005</td><td>0.1970</td></tr>
             <tr><th scope="row">L（mm）</th><td>42.00</td><td>42.01</td><td>42.03</td><td>42.07</td><td>42.01</td><td>41.91</td><td>41.99</td><td>42.02</td><td>42.02</td><td>41.96</td></tr>
-            <tr><th scope="row">D<sub>测</sub>（mm）</th><td>0.02094</td><td>0.02108</td><td>0.02057</td><td>0.02107</td><td>0.02059</td><td>0.02104</td><td>0.02061</td><td>0.02100</td><td>0.02058</td><td>0.02092</td></tr>
+            <tr><th scope="row">D（mm）</th><td>0.02094</td><td>0.02108</td><td>0.02057</td><td>0.02107</td><td>0.02059</td><td>0.02104</td><td>0.02061</td><td>0.02100</td><td>0.02058</td><td>0.02092</td></tr>
           </tbody>
         </table>
       </div>
       <p class="data-note">窄屏可左右滑动查看完整表格。</p>
-      <p class="table-formula"><span class="equation">D<sub>测</sub> = <span class="fraction"><span>λL</span><span>6b</span></span></span></p>
+      <p class="table-formula">
+        <span class="equation">D<sub>总</sub> = <span class="fraction"><span>Lλ</span><span>2b</span></span></span>
+        <span class="equation">D = <span class="fraction"><span>D<sub>总</sub></span><span>3</span></span> = <span class="fraction"><span>Lλ</span><span>6b</span></span></span>
+      </p>
       <p class="result">平均单张厚度：<strong>0.02084 mm</strong>；相对误差：<strong>4.21%</strong>。</p>
     </section>
   </main>
